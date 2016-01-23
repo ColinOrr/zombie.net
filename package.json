@@ -1,0 +1,10 @@
+{
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ColinOrr/zombie.net.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "zombie": "^4.2.1"
+  }
+}
