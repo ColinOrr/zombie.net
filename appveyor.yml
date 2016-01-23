@@ -7,3 +7,5 @@ assembly_info:
   assembly_informational_version: '{version}'
 build:
   verbosity: minimal
+install:
+  - npm install
