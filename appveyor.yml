@@ -8,4 +8,5 @@ assembly_info:
 build:
   verbosity: minimal
 install:
+  - ps: Install-Product node 5
   - npm install
