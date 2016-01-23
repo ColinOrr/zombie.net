@@ -1,4 +1,5 @@
 version: 0.0.1.{build}
+configuration: Release
 assembly_info:
   patch: true
   file: '**\\AssemblyInfo.*'
@@ -6,8 +7,8 @@ assembly_info:
   assembly_file_version: '{version}'
   assembly_informational_version: '{version}'
 build:
+  project: Zombie.sln
   verbosity: minimal
 install:
   - ps: Install-Product node 5
-  - cinst python2
   - npm install
