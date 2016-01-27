@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>zombie.js.driver</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>https://github.com/ColinOrr/zombie.net/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/ColinOrr/zombie.net</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <!--<releaseNotes>Summary of changes made in this release of the package.</releaseNotes>-->
+    <copyright>Copyright © 2016</copyright>
+    <tags>zombie driver zombie.js headless browser testing edje.js node</tags>
+  </metadata>
+</package>
