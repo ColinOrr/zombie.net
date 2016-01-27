@@ -6,9 +6,11 @@ assembly_info:
   assembly_version: '{version}'
   assembly_file_version: '{version}'
   assembly_informational_version: '{version}'
-build:
-  project: Zombie.sln
-  verbosity: minimal
 install:
   - ps: Install-Product node 5
   - npm install
+before_build:
+  - nuget restore
+build:
+  project: Zombie.sln
+  verbosity: minimal
