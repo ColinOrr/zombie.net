@@ -12,6 +12,6 @@
     <description>$description$</description>
     <!--<releaseNotes>Summary of changes made in this release of the package.</releaseNotes>-->
     <copyright>Copyright © 2016</copyright>
-    <tags>zombie driver zombie.js headless browser testing edje.js node</tags>
+    <tags>zombie driver zombie.js headless browser functional integration testing edge.js node javascript</tags>
   </metadata>
 </package>

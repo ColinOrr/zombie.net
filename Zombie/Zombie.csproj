@@ -57,22 +57,22 @@
     <Compile Include="Zombie.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\packages\Edge.js.4.0.0\content\edge\x64\node.dll">
+    <None Include="..\packages\Edge.js.4.0.0\content\edge\x64\node.dll">
       <Link>edge\x64\node.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\packages\Edge.js.4.0.0\content\edge\x86\node.dll">
+    </None>
+    <None Include="..\packages\Edge.js.4.0.0\content\edge\x86\node.dll">
       <Link>edge\x86\node.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Bridge.js" />
-    <Content Include="edge\double_edge.js">
+    </None>
+    <None Include="Bridge.js" />
+    <None Include="edge\double_edge.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="edge\edge.js">
+    </None>
+    <None Include="edge\edge.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="ZombieDriver.js" />
+    </None>
+    <None Include="ZombieDriver.js" />
   </ItemGroup>
   <ItemGroup>
     <None Include="edge\x64\edge.node">
