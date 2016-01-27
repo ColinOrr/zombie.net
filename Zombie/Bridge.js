@@ -2,11 +2,11 @@
 
 //  Wraps a target object providing access to its fields and functions using the
 //  callback pattern
-var Bridge = function(target) {
+const Bridge = function(target) {
 
   //  Evaluates a script within the context of the target object
   this.eval = function(script, callback) {
-    var result = eval(script);
+    let result = eval(script);
     send(result, callback);
   }.bind(target);
 
@@ -23,7 +23,7 @@ var Bridge = function(target) {
 
   //  Calls a function on the target object and returns the results
   this.call = function(input, callback) {
-    var result = target[input.key].apply(target, input.args);
+    let result = target[input.key].apply(target, input.args);
     send(result, callback);
   }
 
@@ -43,7 +43,7 @@ var Bridge = function(target) {
     if (value == null) return true;
 
     if (value instanceof Array) {
-      for (item of value) {
+      for (let item of value) {
         if (!isPrimitive(item)) return false;
       }
     }
