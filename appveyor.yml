@@ -18,3 +18,5 @@ build:
   project: Zombie.sln
   publish_nuget: true
   verbosity: minimal
+after_build:
+  - nuget pack Zombie.js\Zombie.js.nuspec
