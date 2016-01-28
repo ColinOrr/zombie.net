@@ -7,6 +7,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zombie", "Zombie\Zombie.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{5D6F7057-D1B6-4F73-9330-FF47BA48646B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zombie.js", "Zombie.js", "{B4D23D18-DBF7-4C12-88DC-6742C07A2BFD}"
+	ProjectSection(SolutionItems) = preProject
+		Zombie.js\Zombie.js.nuspec = Zombie.js\Zombie.js.nuspec
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{9A401039-7B86-4C6F-9086-BFE2D87965B7}"
+	ProjectSection(SolutionItems) = preProject
+		Zombie.js\tools\init.ps1 = Zombie.js\tools\init.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +34,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9A401039-7B86-4C6F-9086-BFE2D87965B7} = {B4D23D18-DBF7-4C12-88DC-6742C07A2BFD}
 	EndGlobalSection
 EndGlobal

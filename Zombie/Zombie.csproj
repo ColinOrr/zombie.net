@@ -72,6 +72,7 @@
     <None Include="edge\edge.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Zombie.nuspec" />
     <None Include="ZombieDriver.js" />
   </ItemGroup>
   <ItemGroup>

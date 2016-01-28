@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>zombie.js</id>
+    <version>4.2.1</version>
+    <title>Zombie.js</title>
+    <authors>Assaf Arkin</authors>
+    <owners>Colin Orr</owners>
+    <licenseUrl>https://raw.githubusercontent.com/assaf/zombie/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/assaf/zombie</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>A pre-built Windows version of Zombie.js.  This package adds a node_modules folder at the top-level of the solution containing the all of the modules required to run Zombie.js.</description>
+    <!--<releaseNotes>Summary of changes made in this release of the package.</releaseNotes>-->
+    <copyright>Copyright 2016</copyright>
+    <tags>DSL full-stack ajax integration javascript css dom html5 html browser headless BDD specs spec TDD testing tests test</tags>
+  </metadata>
+  <files>
+    <file src="..\node_modules\zombie\**" target="tools\zombie" />
+  </files>
+</package>

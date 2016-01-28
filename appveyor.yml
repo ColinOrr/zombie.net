@@ -8,6 +8,10 @@ assembly_info:
 install:
   - ps: Install-Product node 5
   - npm install
+  # Install zombie's modules nested in a single folder for redistribution
+  - cd node_modules\zombie
+  - npm install --production
+  - cd ..\..
 before_build:
   - nuget restore
 build:
