@@ -19,4 +19,5 @@ build:
   publish_nuget: true
   verbosity: minimal
 after_build:
-  - nuget pack Zombie.js\Zombie.js.nuspec
+  - nuget pack Zombie.js\zombie.js.nuspec
+  - appveyor PushArtifact zombie.js.*.nupkg
