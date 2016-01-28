@@ -1,1 +1,1 @@
-Move-Item $toolsPath\zombie $installPath..\..\node_modules
+Move-Item -Force $toolsPath\zombie $installPath..\..\node_modules

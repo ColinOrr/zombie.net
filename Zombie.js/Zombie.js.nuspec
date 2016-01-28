@@ -15,6 +15,7 @@
     <tags>DSL full-stack ajax integration javascript css dom html5 html browser headless BDD specs spec TDD testing tests test</tags>
   </metadata>
   <files>
+    <file src="tools\**" target="tools" />
     <file src="..\node_modules\zombie\**" target="tools\zombie" />
   </files>
 </package>
