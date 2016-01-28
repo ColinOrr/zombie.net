@@ -20,4 +20,4 @@ build:
   verbosity: minimal
 after_build:
   - nuget pack Zombie.js\zombie.js.nuspec
-  - appveyor PushArtifact zombie.js.*.nupkg
+  - appveyor PushArtifact *.nupkg
