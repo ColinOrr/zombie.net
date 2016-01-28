@@ -4,7 +4,7 @@
     <id>zombie.js</id>
     <version>4.2.1</version>
     <title>Zombie.js</title>
-    <authors>Assaf Arkin</authors>
+    <authors>Colin Orr</authors>
     <owners>Colin Orr</owners>
     <licenseUrl>https://raw.githubusercontent.com/assaf/zombie/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/assaf/zombie</projectUrl>
