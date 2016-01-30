@@ -3,14 +3,12 @@ using Zombie;
 
 namespace Tests
 {
-    class Program
+    class Scratchpad
     {
         static void Main(string[] args)
         {
+            // for adhoc testing or messing about
             dynamic zombie = new ZombieDriver();
-            zombie.visit("http://www.google.com");
-            zombie.assert.text("title", "Google");
-            Console.WriteLine(zombie.html());
         }
     }
 }
