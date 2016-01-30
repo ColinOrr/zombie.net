@@ -6,6 +6,25 @@ namespace Tests
     [TestFixture]
     public class Examples
     {
+        /// <summary>
+        /// Google "zombie.js" and check it's the first result.
+        /// </summary>
+        [Test]
+        public void GettingStarted()
+        {
+            dynamic zombie = new ZombieDriver();
+
+            zombie.visit("http://www.google.com");
+            zombie.fill("q", "zombie.js");
+            zombie.click("input[value=Search]");
+
+            zombie.assert.text("title", "zombie.js - Google Search");
+            zombie.assert.text("#f", "Zombie by assaf - JS.ORG");
+        }
+
+        /// <summary>
+        /// Visit my blog and navigate back to the earliest post.
+        /// </summary>
         [Test]
         public void Navigation()
         {
@@ -27,17 +46,21 @@ namespace Tests
             zombie.assert.url("http://colinthegeek.com/2015/01/31/hello-world/");
         }
 
+        /// <summary>
+        /// Fill out the Facebook sign up form and check the required email validation.
+        /// </summary>
         [Test]
         public void FormSubmission()
         {
             dynamic zombie = new ZombieDriver();
+            zombie.waitDuration = "30s";
 
             zombie.visit("https://www.facebook.com");
             zombie.assert.text("title", "Facebook - Log In or Sign Up");
 
             zombie.fill("firstname", "Rick");
             zombie.fill("lastname", "Grimes");
-            zombie.fill("input[type=password]", "Sher1ffR1ck");
+            zombie.fill("input[type=password]", "SheriffR1ck");
 
             zombie.select("birthday_day", "14");
             zombie.select("birthday_month", "9");
