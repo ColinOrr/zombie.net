@@ -47,7 +47,7 @@ namespace Tests
         }
 
         /// <summary>
-        /// Fill out the Facebook sign up form and check the required email validation.
+        /// Fill out the Facebook sign up form and check the required email validation is triggered.
         /// </summary>
         [Test]
         public void FormSubmission()
