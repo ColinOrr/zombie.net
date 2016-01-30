@@ -2,6 +2,7 @@
 A dynamic driver for running [Zombie.js][1] from .NET
 
 [![Build status][2]][3]
+[![NuGet version][4]][5]
 
 ## Installation
 Zombie.js Driver can be installed from NuGet.  Run the following commands from
@@ -40,7 +41,7 @@ because it passes method calls directly to Zombie.js running in Node behind the
 scenes.
 
 ### Navigation
-Visit [Colin the Geek][4] and navigate back to the earliest post:
+Visit [Colin the Geek][6] and navigate back to the earliest post:
 
 ```csharp
 dynamic zombie = new ZombieDriver();
@@ -91,4 +92,6 @@ zombie.assert.text("#reg_error_inner", "An error occurred. Please try again.");
 [1]: http://zombie.js.org/
 [2]: https://ci.appveyor.com/api/projects/status/ba0wcbvar1vo5voy?svg=true
 [3]: https://ci.appveyor.com/project/ColinOrr/zombie-net
-[4]: http://colinthegeek.com
+[4]: https://badge.fury.io/nu/zombie.js.driver.svg
+[5]: https://www.nuget.org/packages/zombie.js.driver
+[6]: http://colinthegeek.com
