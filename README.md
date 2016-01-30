@@ -22,17 +22,17 @@ The following example Googles "zombie.js" and checks that assaf's site is the
 first result.
 
 ```csharp
-// C# version                                             // JavaScript version
-dynamic zombie = new ZombieDriver();                      const zombie = new Browser();
+// C# version                                               // JavaScript version
+dynamic zombie = new ZombieDriver();                        const zombie = new Browser();
 
-zombie.visit("http://www.google.com");                    zombie.visit("http://www.google.com").then(() => {
-zombie.fill("q", "zombie.js");                              zombie.fill("q", "zombie.js");
-zombie.click("input[value=Search]");                        zombie.click("input[value=Search]").then(() => {
+zombie.visit("http://www.google.com");                      zombie.visit("http://www.google.com").then(() => {
+zombie.fill("q", "zombie.js");                                zombie.fill("q", "zombie.js");
+zombie.click("input[value=Search]");                          zombie.click("input[value=Search]").then(() => {
 
-zombie.assert.text("title", "zombie.js - Google Search");     zombie.assert.text("title", "zombie.js - Google Search");
-zombie.assert.text("#f", "Zombie by assaf - JS.ORG");         zombie.assert.text("#f", "Zombie by assaf - JS.ORG");
+zombie.assert.text("title", "zombie.js - Google Search");       zombie.assert.text("title", "zombie.js - Google Search");
+zombie.assert.text("#f", "Zombie by assaf - JS.ORG");           zombie.assert.text("#f", "Zombie by assaf - JS.ORG");
+                                                              });
                                                             });
-                                                          });
 ```
 
 The driver's API is more or less identical to the JavaScript version.  That's
@@ -40,7 +40,7 @@ because it passes method calls directly to Zombie.js running in Node behind the
 scenes.
 
 ### Navigation
-Visit my blog and navigate back to the earliest post:
+Visit [Colin the Geek][4] and navigate back to the earliest post:
 
 ```csharp
 dynamic zombie = new ZombieDriver();
@@ -91,3 +91,4 @@ zombie.assert.text("#reg_error_inner", "An error occurred. Please try again.");
 [1]: http://zombie.js.org/
 [2]: https://ci.appveyor.com/api/projects/status/ba0wcbvar1vo5voy?svg=true
 [3]: https://ci.appveyor.com/project/ColinOrr/zombie-net
+[4]: http://colinthegeek.com

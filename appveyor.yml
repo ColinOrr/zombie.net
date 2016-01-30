@@ -21,3 +21,8 @@ build:
 after_build:
   - nuget pack Zombie.js\zombie.js.nuspec
   - appveyor PushArtifact .\zombie.js.4.2.1.nupkg
+deploy:
+  provider: NuGet
+  api_key:
+    secure: tqiGBmod5X4QAhyd+yCL/+RqAOVouFERgnOQU8Ln2ayL+0C6usRgACow6EsUN7Gw
+  artifact: /.*\.nupkg/
