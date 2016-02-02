@@ -23,17 +23,29 @@ The following example Googles "zombie.js" and checks that assaf's site is the
 first result.
 
 ```csharp
-// C# version                                               // JavaScript version
-dynamic zombie = new ZombieDriver();                        const zombie = new Browser();
+// C# version                                               
+dynamic zombie = new ZombieDriver();                        
 
-zombie.visit("http://www.google.com");                      zombie.visit("http://www.google.com").then(() => {
-zombie.fill("q", "zombie.js");                                zombie.fill("q", "zombie.js");
-zombie.click("input[value=Search]");                          zombie.click("input[value=Search]").then(() => {
+zombie.visit("http://www.google.com");                      
+zombie.fill("q", "zombie.js");                              
+zombie.click("input[value=Search]");                        
 
-zombie.assert.text("title", "zombie.js - Google Search");       zombie.assert.text("title", "zombie.js - Google Search");
-zombie.assert.text("#f", "Zombie by assaf - JS.ORG");           zombie.assert.text("#f", "Zombie by assaf - JS.ORG");
-                                                              });
-                                                            });
+zombie.assert.text("title", "zombie.js - Google Search");   
+zombie.assert.text("#f", "Zombie by assaf - JS.ORG");
+```
+
+```javascript
+// JavaScript version
+const zombie = new Browser();
+
+zombie.visit("http://www.google.com").then(() => {
+  zombie.fill("q", "zombie.js");
+  zombie.click("input[value=Search]").then(() => {
+
+    zombie.assert.text("title", "zombie.js - Google Search");
+    zombie.assert.text("#f", "Zombie by assaf - JS.ORG");
+  });
+});
 ```
 
 The driver's API is more or less identical to the JavaScript version.  That's
