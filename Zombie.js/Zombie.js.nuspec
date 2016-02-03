@@ -2,12 +2,13 @@
 <package >
   <metadata>
     <id>zombie.js</id>
-    <version>4.2.1</version>
+    <version>$version$</version>
     <title>Zombie.js</title>
     <authors>Colin Orr</authors>
     <owners>Colin Orr</owners>
     <licenseUrl>https://raw.githubusercontent.com/assaf/zombie/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/assaf/zombie</projectUrl>
+    <iconUrl>http://colinthegeek.com/public/apple-touch-icon-precomposed.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A pre-built Windows version of Zombie.js.  This package adds a node_modules folder at the top-level of the solution containing the all of the modules required to run Zombie.js.</description>
     <!--<releaseNotes>Summary of changes made in this release of the package.</releaseNotes>-->

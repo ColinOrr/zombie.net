@@ -8,11 +8,11 @@
     <owners>$author$</owners>
     <licenseUrl>https://raw.githubusercontent.com/ColinOrr/zombie.net/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/ColinOrr/zombie.net</projectUrl>
+    <iconUrl>http://colinthegeek.com/public/apple-touch-icon-precomposed.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-      $description$. Insanely fast, headless browser testing for .NET.
-      Zombie.js NOT INCLUDED - check out the companion "zombie.js" NuGet package
-      if you don't already have Zombie.js installed.
+      $description$ - insanely fast, headless browser testing now available  for .NET.
+      ZOMBIES NOT INCLUDED - check out the "zombie.js" package if you don't have Zombie.js installed.
     </description>
     <!--<releaseNotes>Summary of changes made in this release of the package.</releaseNotes>-->
     <copyright>Copyright © 2016</copyright>
