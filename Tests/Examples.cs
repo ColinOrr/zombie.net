@@ -41,7 +41,12 @@ namespace Tests
             zombie.assert.text(".post:last-child h1", "Hello World");
 
             // Open the earliest post
-            zombie.click(".post:last-child a");
+            try { zombie.click(".post:last-child a"); }
+            catch
+            {
+                // Disqus JavaScript intermittently throws errors :-(
+            }
+
             zombie.assert.text("title", "Hello World · Colin the Geek");
             zombie.assert.url("http://colinthegeek.com/2015/01/31/hello-world/");
         }
