@@ -4,3 +4,4 @@ node_modules
 packages
 *.suo
 *.csproj.user
+*.nupkg
