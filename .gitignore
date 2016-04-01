@@ -5,3 +5,4 @@ packages
 *.suo
 *.csproj.user
 *.nupkg
+.vs

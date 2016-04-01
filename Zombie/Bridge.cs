@@ -32,6 +32,20 @@ namespace Zombie
         }
 
         /// <summary>
+        /// Evaluates JavaScript directly 'this' is bound to the target object.
+        /// </summary>
+        public dynamic @exec(string script)
+        {
+            try
+            {
+                var result = target.eval(script).Result;
+                if (result is ExpandoObject) result = new Bridge(result);
+                return result;
+            }
+            catch (AggregateException e) { throw e.InnerException; }
+        }
+
+        /// <summary>
         /// Evaluates JavaScript directly within the context of the target object.
         /// Particularly useful for expressing lambdas, but can be used to execute any JavaScript that cannot be expressed in C#.
         /// </summary>
