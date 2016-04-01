@@ -1,5 +1,7 @@
 "use strict";
 
+process.on('uncaughtException', e => console.error('Uncaught Exception: ' + e));
+
 const Zombie = require('zombie');
 const zombie = new Zombie();
 
