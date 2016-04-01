@@ -1,0 +1,4 @@
+﻿An after build step will turn off Git change tracking for this file.  To turn
+change tracking back on, run the following command:
+
+    ﻿git update-index --no-assume-unchanged Tests/Scratchpad.cs
