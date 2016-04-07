@@ -3,9 +3,9 @@
 const Zombie = require('zombie');
 const zombie = new Zombie();
 
-process.on('uncaughtException', e => console.error('Uncaught Exception: ' + e));
-
 //  Entry point for Edge.js
 return function(data, callback) {
-  callback(null, new Bridge(zombie));
+    let bridge = new Bridge(zombie);
+    process.on('uncaughtException', e => console.error('Uncaught Exception: ' + e));
+    callback(null, bridge);
 }
