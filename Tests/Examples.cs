@@ -74,7 +74,8 @@ namespace Tests
 
             zombie.choose("Male");
 
-            zombie.click("button[name=websubmit]");
+            try { zombie.click("button[name=websubmit]"); }
+            catch { /* We get a 404 from one of Facebook's frames :-( */ }
 
             //  Validation error - Rick has no email address (due to the zombie apocolypse)
             zombie.assert.text("#reg_error_inner", "An error occurred. Please try again.");
