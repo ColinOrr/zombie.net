@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zombie", "Zombie\Zombie.csproj", "{1DDF5873-D1F6-4127-BDFB-5B7D2B19E22C}"
 EndProject
@@ -9,12 +9,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zombie.js", "Zombie.js", "{B4D23D18-DBF7-4C12-88DC-6742C07A2BFD}"
 	ProjectSection(SolutionItems) = preProject
+		Zombie.js\package.ps1 = Zombie.js\package.ps1
+		Zombie.js\publish.ps1 = Zombie.js\publish.ps1
 		Zombie.js\Zombie.js.nuspec = Zombie.js\Zombie.js.nuspec
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{9A401039-7B86-4C6F-9086-BFE2D87965B7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{55B2CD95-146D-4346-AC60-E6F453D46FDF}"
 	ProjectSection(SolutionItems) = preProject
-		Zombie.js\tools\init.ps1 = Zombie.js\tools\init.ps1
+		Zombie.js\build\zombie.js.targets = Zombie.js\build\zombie.js.targets
 	EndProjectSection
 EndProject
 Global
@@ -36,6 +38,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{9A401039-7B86-4C6F-9086-BFE2D87965B7} = {B4D23D18-DBF7-4C12-88DC-6742C07A2BFD}
+		{55B2CD95-146D-4346-AC60-E6F453D46FDF} = {B4D23D18-DBF7-4C12-88DC-6742C07A2BFD}
 	EndGlobalSection
 EndGlobal

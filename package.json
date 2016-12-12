@@ -5,6 +5,6 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "zombie": "^4.2.1"
+    "zombie": "^5.0.5"
   }
 }
