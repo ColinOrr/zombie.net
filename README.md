@@ -19,31 +19,31 @@ just install the driver.
 
 ## Examples
 ### Getting Started
-The following example Googles "zombie.js" and checks that assaf's site is the
+The following example searches "zombie.js" and checks that assaf's site is the
 first result.
 
 ```csharp
 // C# version                                               
 dynamic zombie = new ZombieDriver();                        
 
-zombie.visit("http://www.google.com");                      
-zombie.fill("q", "zombie.js");                              
-zombie.click("input[value=Search]");                        
+zombie.visit("https://duckduckgo.com");
+zombie.fill("q", "zombie.js");
+zombie.click("input[type=submit]");
 
-zombie.assert.text("title", "zombie.js - Google Search");   
-zombie.assert.text("#f", "Zombie by assaf - JS.ORG");
+zombie.assert.text("title", "zombie.js at DuckDuckGo");
+zombie.assert.text(".result:first-child .result__a", "Zombie.js");
 ```
 
 ```javascript
 // JavaScript version
 const zombie = new Browser();
 
-zombie.visit("http://www.google.com").then(() => {
+zombie.visit("https://duckduckgo.com").then(() => {
   zombie.fill("q", "zombie.js");
-  zombie.click("input[value=Search]").then(() => {
+  zombie.click("input[type=submit]").then(() => {
 
-    zombie.assert.text("title", "zombie.js - Google Search");
-    zombie.assert.text("#f", "Zombie by assaf - JS.ORG");
+    zombie.assert.text("title", "zombie.js at DuckDuckGo");
+    zombie.assert.text(".result:first-child .result__a", "Zombie.js");
   });
 });
 ```

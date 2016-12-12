@@ -7,19 +7,19 @@ namespace Tests
     public class Examples
     {
         /// <summary>
-        /// Google "zombie.js" and check it's the first result.
+        /// Search for "zombie.js" and check it's the first result.
         /// </summary>
         [Test]
         public void GettingStarted()
         {
             dynamic zombie = new ZombieDriver();
 
-            zombie.visit("http://www.google.com");
+            zombie.visit("https://duckduckgo.com");
             zombie.fill("q", "zombie.js");
-            zombie.click("input[value=Search]");
+            zombie.click("input[type=submit]");
 
-            zombie.assert.text("title", "zombie.js - Google Search");
-            zombie.assert.text("#f", "Zombie by assaf - JS.ORG");
+            zombie.assert.text("title", "zombie.js at DuckDuckGo");
+            zombie.assert.text(".result:first-child .result__a", "Zombie.js");
         }
 
         /// <summary>
@@ -60,7 +60,8 @@ namespace Tests
             dynamic zombie = new ZombieDriver();
             zombie.waitDuration = "30s";
 
-            zombie.visit("https://www.facebook.com");
+            try { zombie.visit("https://www.facebook.com"); }
+            catch { /* We get a 404 from one of Facebook's frames :-( */ }
             zombie.assert.text("title", "Facebook - Log In or Sign Up");
 
             zombie.fill("firstname", "Rick");
